@@ -17,7 +17,7 @@ struct FileListView: View {
         .toggleStyle(.checkbox)
         .frame(width: 20)
 
-        Color.clear.frame(width: 52)
+        Spacer().frame(width: 52)
 
         Text("Name")
           .frame(maxWidth: .infinity, alignment: .leading)
@@ -28,7 +28,8 @@ struct FileListView: View {
         Text("Status")
           .frame(width: 90, alignment: .leading)
 
-        Color.clear.frame(width: 28)
+        Spacer().frame(width: 28, height: 40)
+
       }
       .font(.system(size: 11, weight: .semibold))
       .foregroundColor(.labelTertiary)
