@@ -4,9 +4,8 @@ struct FileListView: View {
   @ObservedObject var vm: MockupViewModel
 
   var body: some View {
-    VStack(spacing: 0) {
-      // Column Headers
-      HStack(spacing: 10) {
+    VStack(alignment: .leading, spacing: 0) {
+      HStack(alignment: .center, spacing: 10) {
         Toggle(
           "",
           isOn: Binding(
@@ -28,7 +27,7 @@ struct FileListView: View {
         Text("Status")
           .frame(width: 90, alignment: .leading)
 
-        Spacer().frame(width: 28, height: 40)
+        Spacer().frame(width: 28)
 
       }
       .font(.system(size: 11, weight: .semibold))
@@ -36,7 +35,7 @@ struct FileListView: View {
       .textCase(.uppercase)
       .tracking(0.5)
       .padding(.horizontal, 16)
-      // we no longer add vertical padding – the header will size itself to its text content
+      .padding(.vertical, 8)
       .background(Color.toolbarBG)
 
       Divider().background(Color.separator)
