@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct mockupApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+struct MockupApp: App {
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .frame(minWidth: 720, minHeight: 520)
     }
+    .windowStyle(.hiddenTitleBar)
+  }
 }
